@@ -12,11 +12,10 @@ module.directive('lvlDraggable', ['$rootScope', 'uuid', function ($rootScope, uu
                 id = uuid.new()
                 angular.element(el).attr("id", id);
             }
-            console.log(id);
             el.bind("dragstart", function (e) {
                 e.originalEvent.dataTransfer.setData('text', id);
-                console.log('drag');
                 $rootScope.$emit("LVL-DRAG-START");
+                $rootScope.$apply();
             });
 
             el.bind("dragend", function (e) {
