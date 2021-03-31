@@ -15,11 +15,11 @@ module.directive('lvlDraggable', ['$rootScope', 'uuid', function ($rootScope, uu
             el.bind("dragstart", function (e) {
                 e.originalEvent.dataTransfer.setData('text', id);
                 $rootScope.$emit("LVL-DRAG-START");
-                $rootScope.$apply();
             });
-
+            
             el.bind("dragend", function (e) {
                 $rootScope.$emit("LVL-DRAG-END");
+                $rootScope.$apply();
             });
         }
     };
