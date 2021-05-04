@@ -1,5 +1,5 @@
 {
-  "name": "GolacoDragDrop",
+  "name": "golaco-drag-drop",
   "version": "1.1.0",
   "description": "A fork of lvlDragDrop, made exclusively for solving specific issues.",
   "main": "index.js",
